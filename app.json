@@ -7,17 +7,29 @@
     "icon": "./assets/images/icon.png",
     "scheme": "journal",
     "userInterfaceStyle": "automatic",
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "dev.kushal.journal"
+      "bundleIdentifier": "dev.kushal.journal",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "Journal turns your voice into text for your entries.",
+        "NSMicrophoneUsageDescription": "Journal listens while you speak so it can write your entry for you."
+      }
     },
     "android": {
       "package": "dev.kushal.journal",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#F7F3EE"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -67,6 +79,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "054bc76e-f3eb-49be-aa50-d5daafbcb91e"
+      }
     }
   }
 }
