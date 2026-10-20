@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Warm "paper" palette. Keep in sync with lib/theme.ts (used for navigation chrome). */
+@layer base {
+  :root {
+    --background: 36 33% 97%;
+    --foreground: 24 12% 11%;
+    --card: 36 40% 99%;
+    --card-foreground: 24 12% 11%;
+    --popover: 36 40% 99%;
+    --popover-foreground: 24 12% 11%;
+    --primary: 14 72% 50%;
+    --primary-foreground: 36 40% 99%;
+    --secondary: 34 26% 92%;
+    --secondary-foreground: 24 12% 15%;
+    --muted: 34 26% 92%;
+    --muted-foreground: 25 8% 42%;
+    --accent: 34 30% 90%;
+    --accent-foreground: 24 12% 15%;
+    --destructive: 0 72% 51%;
+    --border: 32 18% 86%;
+    --input: 32 18% 84%;
+    --ring: 14 72% 50%;
+    --radius: 0.75rem;
+    --chart-1: 14 72% 50%;
+    --chart-2: 173 45% 38%;
+    --chart-3: 40 80% 52%;
+    --chart-4: 262 40% 55%;
+    --chart-5: 200 60% 45%;
+  }
+
+  .dark:root {
+    --background: 24 10% 7%;
+    --foreground: 36 25% 92%;
+    --card: 24 9% 10%;
+    --card-foreground: 36 25% 92%;
+    --popover: 24 9% 10%;
+    --popover-foreground: 36 25% 92%;
+    --primary: 16 78% 58%;
+    --primary-foreground: 24 12% 8%;
+    --secondary: 24 7% 16%;
+    --secondary-foreground: 36 25% 92%;
+    --muted: 24 7% 16%;
+    --muted-foreground: 30 8% 62%;
+    --accent: 24 7% 18%;
+    --accent-foreground: 36 25% 92%;
+    --destructive: 0 65% 55%;
+    --border: 24 7% 18%;
+    --input: 24 7% 20%;
+    --ring: 16 78% 58%;
+    --chart-1: 16 78% 58%;
+    --chart-2: 170 45% 48%;
+    --chart-3: 42 85% 60%;
+    --chart-4: 262 50% 68%;
+    --chart-5: 200 65% 58%;
+  }
+}

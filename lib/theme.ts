@@ -1,0 +1,83 @@
+import { DarkTheme, DefaultTheme, type Theme } from 'expo-router/react-navigation';
+
+// Mirrors the CSS variables in global.css for places that need raw colour values
+// (navigation chrome, icons drawn outside NativeWind, the level meter).
+export const THEME = {
+  light: {
+    background: 'hsl(36 33% 97%)',
+    foreground: 'hsl(24 12% 11%)',
+    card: 'hsl(36 40% 99%)',
+    cardForeground: 'hsl(24 12% 11%)',
+    popover: 'hsl(36 40% 99%)',
+    popoverForeground: 'hsl(24 12% 11%)',
+    primary: 'hsl(14 72% 50%)',
+    primaryForeground: 'hsl(36 40% 99%)',
+    secondary: 'hsl(34 26% 92%)',
+    secondaryForeground: 'hsl(24 12% 15%)',
+    muted: 'hsl(34 26% 92%)',
+    mutedForeground: 'hsl(25 8% 42%)',
+    accent: 'hsl(34 30% 90%)',
+    accentForeground: 'hsl(24 12% 15%)',
+    destructive: 'hsl(0 72% 51%)',
+    border: 'hsl(32 18% 86%)',
+    input: 'hsl(32 18% 84%)',
+    ring: 'hsl(14 72% 50%)',
+    radius: '0.75rem',
+    chart1: 'hsl(14 72% 50%)',
+    chart2: 'hsl(173 45% 38%)',
+    chart3: 'hsl(40 80% 52%)',
+    chart4: 'hsl(262 40% 55%)',
+    chart5: 'hsl(200 60% 45%)',
+  },
+  dark: {
+    background: 'hsl(24 10% 7%)',
+    foreground: 'hsl(36 25% 92%)',
+    card: 'hsl(24 9% 10%)',
+    cardForeground: 'hsl(36 25% 92%)',
+    popover: 'hsl(24 9% 10%)',
+    popoverForeground: 'hsl(36 25% 92%)',
+    primary: 'hsl(16 78% 58%)',
+    primaryForeground: 'hsl(24 12% 8%)',
+    secondary: 'hsl(24 7% 16%)',
+    secondaryForeground: 'hsl(36 25% 92%)',
+    muted: 'hsl(24 7% 16%)',
+    mutedForeground: 'hsl(30 8% 62%)',
+    accent: 'hsl(24 7% 18%)',
+    accentForeground: 'hsl(36 25% 92%)',
+    destructive: 'hsl(0 65% 55%)',
+    border: 'hsl(24 7% 18%)',
+    input: 'hsl(24 7% 20%)',
+    ring: 'hsl(16 78% 58%)',
+    radius: '0.75rem',
+    chart1: 'hsl(16 78% 58%)',
+    chart2: 'hsl(170 45% 48%)',
+    chart3: 'hsl(42 85% 60%)',
+    chart4: 'hsl(262 50% 68%)',
+    chart5: 'hsl(200 65% 58%)',
+  },
+};
+
+export const NAV_THEME: Record<'light' | 'dark', Theme> = {
+  light: {
+    ...DefaultTheme,
+    colors: {
+      background: THEME.light.background,
+      border: THEME.light.border,
+      card: THEME.light.background,
+      notification: THEME.light.destructive,
+      primary: THEME.light.primary,
+      text: THEME.light.foreground,
+    },
+  },
+  dark: {
+    ...DarkTheme,
+    colors: {
+      background: THEME.dark.background,
+      border: THEME.dark.border,
+      card: THEME.dark.background,
+      notification: THEME.dark.destructive,
+      primary: THEME.dark.primary,
+      text: THEME.dark.foreground,
+    },
+  },
+};
