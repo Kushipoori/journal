@@ -22,7 +22,8 @@
       "package": "dev.kushal.journal",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#F7F3EE"
+        "monochromeImage": "./assets/images/adaptive-icon-monochrome.png",
+        "backgroundColor": "#F7F2E8"
       },
       "permissions": [
         "android.permission.RECORD_AUDIO",
@@ -42,8 +43,13 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash.png",
+          "imageWidth": 160,
           "resizeMode": "contain",
-          "backgroundColor": "#F7F3EE"
+          "backgroundColor": "#F7F3EE",
+          "dark": {
+            "image": "./assets/images/splash.png",
+            "backgroundColor": "#141110"
+          }
         }
       ],
       "expo-status-bar",
